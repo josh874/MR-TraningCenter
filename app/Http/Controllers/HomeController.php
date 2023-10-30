@@ -12,24 +12,20 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
+
    public function index()
     {
         $users=User::all();
         return view('home',compact('users'));
     }
+
    function Delete($id)
          {
              $Data= User::find($id);
              $Data->delete();
              return redirect()->back()->with('Deleted','Succesfully Deleted !');
          }
-    /*     
-    function editData($id)
-         {
-             $Data = User::find($id);   
-             return  redirect ('home',['editData'=>$Data]);              
-         }  
-    */
+
     function update(Request $request)
          {
              $Data= User::find($request->id);
@@ -39,6 +35,5 @@ class HomeController extends Controller
              $Data->address = $request->address;
              $Data->save();
              return redirect()->back()->with('Updated',' Succesfully Updated !'); 
-            // return ["Result"=>"data is updated !"] ;   
          }
 }

@@ -82,12 +82,12 @@
                 <a class="btn btn btn-warning"><i class="fa-brands fa-github"></i></a>
                 <a class="btn btn btn-warning"><i class="fa-solid fa-envelope"></i><a>
             </div> 
-            <p>&copy;2022. All right reserved MR-Traning | <span class="text-warning p-0"> Design By Mikiyas Leul Haileselassie</span></p>
+            <p>&copy;2023. All right reserved MR-Traning | <span class="text-warning p-0"> Design By Eyasu Wendwesen Agze</span></p>
             <p>Contact US</p>
             <div>    
               <p><i class="fa fa-map-marker"></i> Babugaya Building. Bishoftu,Oromia </p>
               <p><i class="fa fa-envelope"></i> MRtech-Traning@gmail.com</p>
-              <p><i class="fa fa-phone"></i>  251 978-7856</p>
+              <p><i class="fa fa-phone"></i>  09-32-16-66-31</p>
             </div>
         </div>
       </footer><!--Footer--> 

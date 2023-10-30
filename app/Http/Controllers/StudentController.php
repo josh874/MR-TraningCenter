@@ -7,13 +7,35 @@ use App\Models\Student;
 
 class StudentController extends Controller
 {
-    /*
-    public function create(Request $request)
-        {
-           $firstname= $request->input('firstname');
-            // dd($firstname);                
-        }
-    */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+   public function index()
+    {
+        $students=Student::all();
+        return view('Studentlist',compact('students'));
+    }
+    
+   function Delete($id)
+         {
+             $Data= Student::find($id);
+             $Data->delete();
+             return redirect()->back()->with('Deleted','Succesfully Deleted !');
+         }
+
+    function update(Request $request)
+         {
+             $Data= Student::find($request->id);
+             $Data->firstname = $request->name;
+             $Data->email = $request->email;  
+             $Data->phonenumber = $request->phonenumber;          
+             $Data->address = $request->address;
+             $Data->save();
+             return redirect()->back()->with('Updated',' Succesfully Updated !'); 
+         }
+
     protected function validator(Request $request)
         {
             return Validator::make($request, [
@@ -49,6 +71,5 @@ class StudentController extends Controller
             ]);
             return redirect()->back()->with('success','Student succesfully registerd !');
         }
-
     
 }

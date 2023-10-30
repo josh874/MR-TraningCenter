@@ -12,8 +12,11 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/student', [StudentController::class, 'index'])->name('student');
 Route::post('delete/{id}', [HomeController::class, 'Delete']);
+Route::post('delete/{id}', [StudentController::class, 'Delete']);
 Route::post('/edit', [HomeController::class, 'update']);
+Route::post('/studentedit', [StudentController::class, 'update']);
 
 // Route::get('/dashboared', [StudentController::class, 'index'])->name('Dashboared');
 Route::get('/dashboared', [ChartController::class, 'index'])->name('Dashboared');

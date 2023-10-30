@@ -85,27 +85,30 @@
                     <a href=" {{ 'S-Registration' }}"> <i class="fas fa-users"></i> Student Registration</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-list"></i>Student List</a>
+                    <a href="{{ __('student') }}">
+                        <i class="fa fa-list"></i>
+                        Student List
+                    </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="#">
                         <i class="fa fa-comments"></i>
                         Certificat
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="{{ __('home') }}">
                         <i class="fa fa-list"></i>
                         Workers List
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#">
                         <i class="fa fa-comments"></i>
                         Comment
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="{{ __('profile') }}">
                         <i class="fa fa-user"></i>
